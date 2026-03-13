@@ -7,40 +7,17 @@ import { useState } from "react";
 export default function Header() {
     const pathname = usePathname();
 
-    const [searchOpen, setSearchOpen] = useState(false);
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const [searchOpen, setSearchOpen] = useState(false);
 
-    const [searchText, setSearchText] = useState("");
-    const [suggestions, setSuggestions] = useState([]);
-
-    const products =[
-      "pants",
-      "Shirt",
-      "Tshirt",
-      "Jeans",
-      "Shorts",
-      "Jacket",
-      "Kurtha"
-    ];
-
-    function handleSearch(e) {
-      const value = e.target.value;
-      setSearchText(value);
-
-      if (value===""){
-        setSuggestions([]);
-        return;
-      }
-      const filtered = products.filter((item) =>
-      item.toLowerCase().startsWith(value.toLowerCase()));
-      setSuggestions(filtered);
-    }
-    
     const hideNav =
     pathname==="/success" ||
     pathname==="/error" ||
     pathname==="/failure" ||
     pathname==="/login" ||
+    pathname==="/wishlist"||
+    pathname==="/addtocart"||
+    pathname==="/ordersummary"||
     pathname==="/signup";
 
 const isHome = pathname === "/";

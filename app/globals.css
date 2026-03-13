@@ -815,33 +815,27 @@ body{
 /* INITIAL MESSY STACK */
 
 .card:nth-child(1){
-    transform: translate(-50%, -50%) rotate(-12deg);
-    z-index: 6;
+    transform: translate(-45vw, -50%) rotate(-9deg);
 }
 
 .card:nth-child(2){
-    transform: translate(-45%, -52%) rotate(8deg);
-    z-index: 5;
+    transform: translate(-30vw, -60%) rotate(4deg);
 }
 
 .card:nth-child(3){
-    transform: translate(-55%, -48%) rotate(-5deg);
-    z-index: 4;
+    transform: translate(-15vw, -55%) rotate(-5deg);
 }
 
 .card:nth-child(4){
-    transform: translate(-48%, -50%) rotate(15deg);
-    z-index: 3;
+     transform: translate(0vw, -60%) rotate(8deg);
 }
 
 .card:nth-child(5){
-    transform: translate(-52%, -53%) rotate(-18deg);
-    z-index: 2;
+    transform: translate(15vw, -55%) rotate(-2deg);
 }
 
 .card:nth-child(6){
-    transform: translate(-50%, -47%) rotate(6deg);
-    z-index: 1;
+    transform: translate(30vw, -50%) rotate(12deg);
 }
 
 
@@ -2638,7 +2632,7 @@ z
 /*ADD TO CART*/
 
 .add-to-cart {
-    padding: 25px 20px;
+    padding: 5px 20px;
 }
 
 .add-to-cart h3 {
@@ -3325,7 +3319,8 @@ z
     padding: 5px;
     margin-top: 80px;
     border-radius: 5px;
-
+    display:flex;
+    justify-content:flex-start;
 }
 
 .wish-lits .col-md-5 h3 {
@@ -3333,8 +3328,6 @@ z
     font-weight: 400;
     margin-bottom: 10px;
 }
-
-
 
 @media (max-width: 768px) {
 
@@ -3415,7 +3408,7 @@ z
     letter-spacing: 0.2px;
     font-size: 28px;
     margin-bottom: 15px;
-    margin-top: 50px;
+    margin-top: 5px;
 }
 
 .order-summary .address-card {
