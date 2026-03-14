@@ -4001,7 +4001,7 @@ z
 }
 
 .myAccount .tab-content{
-    display:none;
+    display:block;
 }
 .myAccount .tab-content.active{
     display:block;
@@ -4505,7 +4505,7 @@ z
 /*RETURN*/
 
 .form-step{
-    display: none;
+    display: block;
 }
 
 .form-step.active{
@@ -4625,9 +4625,10 @@ z
  
 }
 .return .left-section .option{
+    color: #363434;
     margin-top: 24px;
-    font-size:20px;
-    color: rgb(54, 52, 52);
+    font-size: 14px;
+    line-height: 30px;
 }
 
 .return .right-section .heading{
@@ -4637,9 +4638,10 @@ z
  
 }
 .return .right-section .option{
+    color: #363434;
     margin-top: 24px;
-    font-size:20px;
-    color: rgb(54, 52, 52);
+    font-size: 14px;
+    line-height: 30px;
 }
 .return .submit-btn {
     display: flex;
@@ -4662,6 +4664,30 @@ z
     border-radius: 10px;
     font-size: 18px;
 }
+
+.return .submit .previous{
+    padding: 10px 50px;
+    border: 1px black solid;
+    background: white;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.return .submit .next{
+    padding: 10px 50px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.return .submit{
+    gap: 15px;
+    margin-top: 20px;
+    display: flex;
+}
+
+
 .return-options{
     width: 800px;
     margin: 40px auto;
@@ -4743,14 +4769,14 @@ z
 
 
 .return .popup {
-    display: none;
+    display: flex;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.4); 
-    
+    z-index:999;
     justify-content: center;  
     align-items: flex-start; 
 }

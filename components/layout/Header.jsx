@@ -18,6 +18,7 @@ export default function Header() {
     pathname==="/wishlist"||
     pathname==="/addtocart"||
     pathname==="/ordersummary"||
+    pathname==="/profile"||
     pathname==="/signup";
 
 const isHome = pathname === "/";
