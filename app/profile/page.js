@@ -52,7 +52,7 @@ export default function Profile(){
                                 <div className="cart-items">
                                     <div className="cart-card">
                                         <div className="cart-img">
-                                            <Link href="#"><img src="/images/sample6.jpeg"/></Link>
+                                            <Link href="/products"><img src="/images/sample6.jpeg"/></Link>
                                         </div>
                                         <div className="cart-details active">
                                             <h4>Elegant co ord set</h4>

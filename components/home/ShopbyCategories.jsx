@@ -52,7 +52,7 @@ export default function ShopbyCategories(){
                                         <SwiperSlide>
                         <div className="product-card">
                             <div className="image-card">
-                                <Link href="#"><img src="/images/sample3.jpeg"/></Link>
+                                <Link href=""><img src="/images/sample3.jpeg"/></Link>
                                 <Link href="#"><button className="category-label">Shirts</button></Link>
                             </div>
                         </div> 

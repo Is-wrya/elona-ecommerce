@@ -54,11 +54,11 @@ return (
                     EN <i className="fa-solid fa-chevron-down"></i>
                 </span>
 
-                <Link href="/"><i className="fa-regular fa-heart"></i></Link>
-                <Link href="/"><i className="fa-regular fa-user"></i></Link>
+                <Link href="/wishlist"><i className="fa-regular fa-heart"></i></Link>
+                <Link href="/profile"><i className="fa-regular fa-user"></i></Link>
                 
                 <div className="cart">
-                    <Link href="/"><i className="fa-solid fa-cart-shopping"></i></Link>
+                    <Link href="/addtocart"><i className="fa-solid fa-cart-shopping"></i></Link>
                     <span className="badge">1</span>
                 </div>
             </div>
@@ -70,10 +70,10 @@ return (
         <div className="container">
             <ul className="nav-menu">
                 <li><Link href="/" className={pathname === "/" ? "active" : ""}>HOME</Link></li>
-                <li><Link href="#" >SHOP</Link></li>
-                <li><Link href="#" >COLLECTION</Link></li>
-                <li><Link href="#" >NEW ARRIVALS</Link></li>
-                <li><Link href="#" >TOP SELLING</Link></li>
+                <li><Link href="/products" >SHOP</Link></li>
+                <li><Link href="/collections" >COLLECTION</Link></li>
+                <li><Link href="/products" >NEW ARRIVALS</Link></li>
+                <li><Link href="/products" >TOP SELLING</Link></li>
             </ul>
         </div>
     </nav>

@@ -40,14 +40,14 @@ export default function Footer() {
                     <div className="footer-col">
                         <h4>Menu</h4>
                         <ul>
-                            <li><Link href="#">Explore</Link></li>
-                            <li><Link href="#">New Arrivals</Link></li>
-                            <li><Link href="#">Categories</Link></li>
-                            <li><Link href="#">Top Products</Link></li>
-                            <li><Link href="#">Our Collections</Link></li>
-                            <li><Link href="#">Men</Link></li>
-                            <li><Link href="#">Women</Link></li>
-                            <li><Link href="#">Brands</Link></li>
+                            <li><Link href="/products">Explore</Link></li>
+                            <li><Link href="/products">New Arrivals</Link></li>
+                            <li><Link href="/products">Categories</Link></li>
+                            <li><Link href="/products">Top Products</Link></li>
+                            <li><Link href="/products">Our Collections</Link></li>
+                            <li><Link href="/products">Men</Link></li>
+                            <li><Link href="/products">Women</Link></li>
+                            <li><Link href="/products">Brands</Link></li>
                         </ul>
                     </div>
                     <div className="footer-col">
@@ -63,7 +63,7 @@ export default function Footer() {
                     <div className="footer-col">
                         <h4>Accounts</h4>
                         <ul>
-                            <li><Link href="#">My Account</Link></li>
+                            <li><Link href="/profile">My Account</Link></li>
                             <li><Link href="#">My Orders</Link></li>
                             <li><Link href="#">Vouchers and Discount</Link></li>
                         </ul>

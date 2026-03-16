@@ -156,7 +156,7 @@ export default function Newarrivals(){
                 </Swiper>
             </div>
             <div className="button">
-                <Link href="#"><button className="primary-button">SHOP NOW</button></Link>
+                <Link href="products"><button className="primary-button">SHOP NOW</button></Link>
             </div>
         </section>
        

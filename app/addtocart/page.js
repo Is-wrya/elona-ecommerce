@@ -11,7 +11,7 @@ export default function AddtoCart(){
                 <div className="left-heading">
                     <div>
                         <h3> Cart</h3>
-                        <p><Link href="index.html"> home</Link> / <Link href="product.html">cart</Link>
+                        <p><Link href="/"> home</Link> / <Link href="/product">cart</Link>
                         </p>
                     </div>
                 </div>

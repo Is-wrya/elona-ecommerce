@@ -26,15 +26,7 @@ export default function OrderSummary(){
                                 </div>
                                 <Link href="#" className="delivery-link">Add Delivery Instructions</Link>
                                 <div className="delivery-instructions">
-                                    {/* <textarea placeholder="Add your instructions" id="instruction"></textarea>
-                                    <div className="instruction-btn">
-                                        <button className="cancelBtn">
-                                            Cancel
-                                        </button>
-                                        <button className="SaveBtn">
-                                            Save
-                                        </button>
-                                    </div> */}
+                                 
                                 </div>
                                 <div className="check-icon">
                                     <i className="fa-solid fa-check"></i>
@@ -52,7 +44,7 @@ export default function OrderSummary(){
                                     <span>Credit or Debit card</span>
                                 </label>
                                 <div className="images">
-                                    <img src="./assets/img/payment.svg" alt=""/>
+                                    <img src="/images/payment.svg" alt=""/>
                                 </div>
                                 <label className="payment-option">
                                     <input type="radio" name="payment"/>
@@ -113,7 +105,7 @@ export default function OrderSummary(){
                         <div className="cart-items">
                             <div className="cart-card">
                                 <div className="cart-img">
-                                    <Link href="productview.php"><img src="/images/sample1.jpeg" alt=""/></Link>
+                                    <Link href="/productview"><img src="/images/sample1.jpeg" alt=""/></Link>
                                 </div>
 
                                 <div className="cart-details">
@@ -134,7 +126,7 @@ export default function OrderSummary(){
                         <div className="cart-items">
                             <div className="cart-card">
                                 <div className="cart-img">
-                                    <Link href="productview.php"><img src="/images/sample2.jpeg" alt=""/></Link>
+                                    <Link href="/productview"><img src="/images/sample2.jpeg" alt=""/></Link>
                                 </div>
 
                                 <div className="cart-details">

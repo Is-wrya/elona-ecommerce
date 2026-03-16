@@ -12,7 +12,7 @@ export default function Products(){
                 <div className="left-heading">
                 <div>   
                     <h3> Explore</h3>
-                    <p><Link href="index.html"> home</Link> / <Link href="product.html">explore</Link></p>
+                    <p><Link href="/"> home</Link> / <Link href="/products">explore</Link></p>
                 </div>
                 </div>
                 <div className="right-heading">

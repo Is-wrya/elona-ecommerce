@@ -57,7 +57,7 @@ export default function WishList(){
                 <div className="cart-items">
                     <div className="cart-card">
                         <div className="cart-img">
-                            <Link href="#"><img src="/images/sample2.jpeg" alt=""/></Link>
+                            <Link href="productview"><img src="/images/sample2.jpeg" alt=""/></Link>
                         </div>
 
                         <div className="cart-details">
@@ -86,7 +86,7 @@ export default function WishList(){
                 <div className="cart-items">
                     <div className="cart-card">
                         <div className="cart-img">
-                            <Link href="#"><img src="/images/sample3.jpeg" alt=""/></Link>
+                            <Link href="/productview"><img src="/images/sample3.jpeg" alt=""/></Link>
                         </div>
 
                         <div className="cart-details">
@@ -115,7 +115,7 @@ export default function WishList(){
                 <div className="cart-items">
                     <div className="cart-card">
                         <div className="cart-img">
-                            <Link href="#"><img src="/images/sample4.jpeg" alt=""/></Link>
+                            <Link href="/productview"><img src="/images/sample4.jpeg" alt=""/></Link>
                         </div>
 
                         <div className="cart-details">
@@ -170,7 +170,7 @@ export default function WishList(){
 > <SwiperSlide>
                         <div className="product-card ">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample6.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample6.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -182,25 +182,10 @@ export default function WishList(){
                                 </div>
                             </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                   <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample7.jpeg" alt=""/></Link>
-                            </div>
-                            <div className="details">
-                                <h4>Green maxi dress</h4>
-                                <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-        
-                                  <div className="price">
-                                    $120
-                                    </div>
-                                </div>
-                            </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="product-card">
-                            <div className="product-img">
-                                <Link href="#"><img src="/images/sample1.jpeg" alt=""/></Link>
+                                <Link href="productview"><img src="/images/sample4.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -216,22 +201,7 @@ export default function WishList(){
                     <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample2.jpeg" alt=""/></Link>
-                            </div>
-                            <div className="details">
-                                <h4>Green maxi dress</h4>
-                                <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                                
-                                  <div className="price">
-                                    $120
-                                    </div>
-                                </div>
-                            </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="product-card">
-                            <div className="product-img">
-                                <Link href="#"><img src="/images/sample3.jpeg" alt=""/></Link>
+                                <Link href="productview"><img src="/images/sample1.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -247,7 +217,7 @@ export default function WishList(){
                     <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample4.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample2.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -262,7 +232,38 @@ export default function WishList(){
                     <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample6.jpeg" alt=""/></Link>
+                                <Link href=".productview"><img src="/images/sample3.jpeg" alt=""/></Link>
+                            </div>
+                            <div className="details">
+                                <h4>Green maxi dress</h4>
+                                <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
+                                
+                                  <div className="price">
+                                    $120<span className="old">$260</span> <span className="off">
+                                    <button className="offer">-20%</button></span>
+                                    </div>
+                                </div>
+                            </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="product-card">
+                            <div className="product-img">
+                                <Link href="/productview"><img src="/images/sample4.jpeg" alt=""/></Link>
+                            </div>
+                            <div className="details">
+                                <h4>Green maxi dress</h4>
+                                <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
+                                
+                                  <div className="price">
+                                    $120
+                                    </div>
+                                </div>
+                            </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className="product-card">
+                            <div className="product-img">
+                                <Link href="/productview"><img src="/images/sample6.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
