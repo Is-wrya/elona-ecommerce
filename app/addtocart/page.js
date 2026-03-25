@@ -11,7 +11,7 @@ export default function AddtoCart(){
                 <div className="left-heading">
                     <div>
                         <h3> Cart</h3>
-                        <p><Link href="/"> home</Link> / <Link href="/product">cart</Link>
+                        <p><Link href="/"> home</Link> / <Link href="/products">cart</Link>
                         </p>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ export default function AddtoCart(){
                     <div className="cart-items">
                         <div className="cart-card">
                             <div className="cart-img">
-                                <Link href="product.php"><img src="/images/sample1.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample1.jpeg" alt=""/></Link>
                             </div>
 
                             <div className="cart-details">
@@ -59,7 +59,7 @@ export default function AddtoCart(){
                     <div className="cart-items">
                         <div className="cart-card">
                             <div className="cart-img">
-                                <img src="/images/sample2.jpeg" alt=""/>
+                                <Link href="/productview"><img src="/images/sample2.jpeg" alt=""/></Link>
                             </div>
 
                             <div className="cart-details">

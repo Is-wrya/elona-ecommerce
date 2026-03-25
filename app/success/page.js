@@ -14,8 +14,8 @@ export default function SuccessPage(){
                     <p className="update">We’re getting started on your order right away . You’ll receive an confirmation Email shortly</p>
                     <p class="order-id">Your Order Id : JE6Cx986</p>
                     <div className="btn-success">
-                        <Link href="#" className="btn-odr">Go to Orders</Link>
-                        <Link href="#" className="cont-shop">Continue Shopping</Link>
+                        <Link href="/addtocart" className="btn-odr">Go to Orders</Link>
+                        <Link href="/products" className="cont-shop">Continue Shopping</Link>
                     </div>
                 </div>
             </div>

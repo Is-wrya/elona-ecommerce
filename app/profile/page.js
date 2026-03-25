@@ -11,8 +11,12 @@ export default function Profile(){
     const [phoneNum,setphone] = useState("");
     const [email,setEmail] = useState("");
     const [date,setDateofbirth] =useState("");
-    // const newLocal = (<h2 className="your-address">Address</h2>, <div className="address-card">
-    // </div>);
+    const [showForm,setShowForm] = useState(false);
+    const saveAddress = () => {
+        alert("Your Address saved successfully!");
+        setShowForm(false);
+        };
+   
     return(
         <section className="myAccount padding-main">
             <div className="container">
@@ -63,7 +67,7 @@ export default function Profile(){
                                                 <span className="oldprice">$270</span>
                                                 <span className="offer">-20%</span>
                                                 <span className="return">
-                                                    <Link href="#">Return product</Link>
+                                                    <Link href="/return">Return product</Link>
                                                 </span>
                                             </div>
                                         </div>
@@ -74,10 +78,10 @@ export default function Profile(){
                     )}
                     {activeTab==="address" && (
                       <div className="tab-content">
-                      <h2 className="your-address">Address</h2>
-                      <div className="address-card">
-                        <div className="card-items">
-                            <div className="card-details">
+                        <h2 className="your-address">Address</h2>
+                        <div className="address-card">
+                            <div className="card-items">
+                                <div className="card-details">
                                 <h4>Zara</h4>
                                 <p>90A, Street 5</p>
                                 <p>California</p>
@@ -102,19 +106,37 @@ export default function Profile(){
                                 </div>
                             </div>
                             <div className="add-button">
-                                <button className="add-btn">
+                                    <button className="add-btn" onClick={()=> setShowForm(true)}> 
                                     <i className="fa-solid fa-plus"></i>Add Address
-                                </button>
+                                    </button>
                             </div>
+                            {showForm &&(
+                                <div className="address-form">
+                                        <input type="text" placeholder="Full Name"/>
+                                        <input type="text" placeholder="Street Address"/>
+                                        <input type="text" placeholder="City"/>
+                                        <input type="text" placeholder="Pin Code"/>
+                                        <input type="text" placeholder="Landmark"/>
+                                        <input type="text" placeholder="Phone Number"/>
+                                        <div className="form-buttons">
+                                            <button type="button" onClick={saveAddress}>Save</button>
+                                            <button type="button" onClick={()=>setShowForm(false)}>Cancel</button>
+                                        </div>
+                                        
+                                </div>
+                            )}
+                             </div>
                         </div>
-                       </div> 
-                      </div>
-                    )}
+                    </div>
+                     )}
                     {activeTab==="account" && (
                         <div className="tab-content">
                         <h2 className="account-de">Account Details</h2>
                         <div className="profile">
                             <img className="profile-image" src="/images/profile.jpg" alt=""/>
+                            <div className="camera-edit">
+                                <i className="fa-regular fa-camera"></i>
+                            </div>
                         </div>
                         <form className="account-form">
                             <div className="form-row">
@@ -161,7 +183,7 @@ export default function Profile(){
                         </div>
                     )}
                 </div>
-
+         
             </div>
         </section>
     );

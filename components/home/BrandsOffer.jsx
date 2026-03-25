@@ -30,31 +30,31 @@ export default function Brands(){
                 }}>
            
             <SwiperSlide>
-               <Link href="#"><img src="images/brand2.svg" alt=""/></Link> 
+               <Link href="/collections"><img src="images/brand2.svg" alt=""/></Link> 
             </SwiperSlide>
             <SwiperSlide>
-               <Link href="#"><img src="images/brand1.svg" alt=""/></Link> 
+               <Link href="/collections"><img src="images/brand1.svg" alt=""/></Link> 
             </SwiperSlide>
             <SwiperSlide>
-               <Link href="#"><img src="images/brand3.svg" alt=""/></Link> 
+               <Link href="/collections"><img src="images/brand3.svg" alt=""/></Link> 
             </SwiperSlide>
             <SwiperSlide>
-               <Link href="#"><img src="images/brand4.svg" alt=""/></Link> 
+               <Link href="/collections"><img src="images/brand4.svg" alt=""/></Link> 
             </SwiperSlide>
             <SwiperSlide>
-               <Link href="#"><img src="images/brand5.svg" alt=""/></Link> 
+               <Link href="/collections"><img src="images/brand5.svg" alt=""/></Link> 
             </SwiperSlide>
             <SwiperSlide>
-               <Link href="#"><img src="images/brand6.svg" alt=""/></Link> 
+               <Link href="/collections"><img src="images/brand6.svg" alt=""/></Link> 
             </SwiperSlide>
             <SwiperSlide>
-               <Link href="#"><img src="images/brand7.svg" alt=""/></Link> 
+               <Link href="/collections"><img src="images/brand7.svg" alt=""/></Link> 
             </SwiperSlide>
             <SwiperSlide>
-               <Link href="#"><img src="images/brand8.svg" alt=""/></Link> 
+               <Link href="/collections"><img src="images/brand8.svg" alt=""/></Link> 
             </SwiperSlide>
             <SwiperSlide>
-               <Link href="#"><img src="images/brand9.svg" alt=""/></Link> 
+               <Link href="/collections"><img src="images/brand9.svg" alt=""/></Link> 
             </SwiperSlide>
              </Swiper>
         </div>

@@ -15,11 +15,12 @@ export default function Header() {
     pathname==="/error" ||
     pathname==="/failure" ||
     pathname==="/login" ||
-    pathname==="/wishlist"||
     pathname==="/addtocart"||
     pathname==="/ordersummary"||
     pathname==="/profile"||
     pathname==="/return"||
+    pathname==="/blog"||
+    pathname==="/productview"||
     pathname==="/signup";
 
 const isHome = pathname === "/";
@@ -31,6 +32,11 @@ return (
       {isHome && (
         <div className="search-icon">
           <i className="fa-solid fa-magnifying-glass"> </i>
+          <input className="text-field"
+        type="text"
+        placeholder="Search here..."
+      />
+
         </div>
       )}
     </div>
@@ -40,16 +46,36 @@ return (
     <header className="top-header">
         <div className="container header-flex">
             <div className="nav-left">
-                <Link href="/">MEN</Link>
-                <Link href="/">WOMEN</Link>
+                <Link href="/products">MEN</Link>
+                <Link href="/products">WOMEN</Link>
             </div>
 
             <div className="logo">
-                <img src="/images/logo.png" alt="logo" />
+                <Link href="/"><img src="/images/logo.png" alt="logo" /></Link>
             </div>
 
             <div className="nav-right">
-                 <i className="fa-solid fa-magnifying-glass" onClick={() => setSearchOpen(true)}></i>
+                 <div>
+                 <i 
+                  className="fa-solid fa-magnifying-glass" 
+                  onClick={() => 
+                    setSearchOpen(!searchOpen)
+                  }
+                  style={{ cursor: "pointer" }}
+                ></i>
+                 {searchOpen && (
+                  <div className="search-bar">
+                    <div className="search-container">
+                      <i className="fa-solid fa-magnifying-glass search-icon"></i>
+                      <input type="text" placeholder="Search"/>
+                      <i 
+                        className="fa-solid fa-xmark close-search close" 
+                        onClick={() => setSearchOpen(false)}
+                      ></i>
+                    </div>
+                  </div>
+                 )}
+                 </div>
                 <span className="lang">
                     EN <i className="fa-solid fa-chevron-down"></i>
                 </span>
@@ -65,7 +91,7 @@ return (
         </div>
     </header>
 {/* BOTTOM NAVBAR */}
-{!hideNav && (
+{!hideNav && !searchOpen && (
     <nav className="bottom-nav">
         <div className="container">
             <ul className="nav-menu">
@@ -82,7 +108,7 @@ return (
 
       {/* MOBILE DRAWER */}
       {drawerOpen && (
-        <div className="mobile-drawer" id="mobileDrawer">
+        <div className="mobile-drawer">
 
           <div className="drawer-header">
             <span onClick={() => setDrawerOpen(false)}>
@@ -93,11 +119,11 @@ return (
           <ul>
 
             <li>
-              <Link href="/product">MEN</Link>
+              <Link href="/products">MEN</Link>
             </li>
 
             <li>
-              <Link href="/product">WOMEN</Link>
+              <Link href="/products">WOMEN</Link>
             </li>
 
             <li>
@@ -105,7 +131,7 @@ return (
             </li>
 
             <li>
-              <Link href="/product">SHOP</Link>
+              <Link href="/products">SHOP</Link>
             </li>
 
             <li>
@@ -113,11 +139,11 @@ return (
             </li>
 
             <li>
-              <Link href="/product">NEW ARRIVALS</Link>
+              <Link href="/products">NEW ARRIVALS</Link>
             </li>
 
             <li>
-              <Link href="/product">TOP SELLING</Link>
+              <Link href="/products">TOP SELLING</Link>
             </li>
 
           </ul>

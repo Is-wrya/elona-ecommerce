@@ -14,7 +14,7 @@ export default function FailurePage(){
                     <p className="update">Your Transaction has failed due to some technical error !<br/>Please Try Again</p>
                     <div className="btn-failure">
                         <Link href="/profile" className="btn-odr">Go to Orders</Link>
-                        <Link href="/product" className="cont-shop">Continue Shopping</Link>
+                        <Link href="/products" className="cont-shop">Continue Shopping</Link>
                     </div>
                 </div>
             </div>

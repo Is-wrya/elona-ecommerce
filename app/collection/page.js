@@ -11,7 +11,7 @@ export default function Collection(){
                 <div className="left-heading">
                     <div>
                         <h3> Collections</h3>
-                        <p><Link href="#"> home</Link> / <Link href="#">collections</Link> / <Link href="#">dresses</Link>
+                        <p><Link href="/"> home</Link> / <Link href="/products">collections</Link> / <Link href="/collections">dresses</Link>
                         </p>
                     </div>
                 </div>
@@ -48,11 +48,11 @@ export default function Collection(){
                         <div className="product-img">
                            <img src="/images/sample1.jpeg" alt="product"/>
                            <div className="hover-icons">
-                                        <Link href="productview.php" className="view-icon">
+                                        <Link href="/productview" className="view-icon">
                                             <i className="fa-regular fa-eye"></i>
                                         </Link>
 
-                                        <Link href="#" className="cart-icon">
+                                        <Link href="/addtocart" className="cart-icon">
                                             <i className="fa-solid fa-cart-shopping"></i>
                                         </Link>
                                     </div>
@@ -75,11 +75,11 @@ export default function Collection(){
                     <div className="product-img">
                         <img src="/images/sample2.jpeg" alt="product"/>
                         <div className="hover-icons">
-                                        <Link href="productview.php" className="view-icon">
+                                        <Link href="/productview" className="view-icon">
                                             <i className="fa-regular fa-eye"></i>
                                         </Link>
 
-                                        <Link href="#" className="cart-icon">
+                                        <Link href="/addtocart" className="cart-icon">
                                             <i className="fa-solid fa-cart-shopping"></i>
                                         </Link>
                                     </div>
@@ -103,11 +103,11 @@ export default function Collection(){
                     <div className="product-img">
                         <img src="/images/sample3.jpeg" alt="product"/>
                         <div className="hover-icons">
-                                        <Link href="productview.php" className="view-icon">
+                                        <Link href="/productview" className="view-icon">
                                             <i className="fa-regular fa-eye"></i>
                                         </Link>
 
-                                        <Link href="#" className="cart-icon">
+                                        <Link href="/addtocart" className="cart-icon">
                                             <i className="fa-solid fa-cart-shopping"></i>
                                         </Link>
                                     </div>
@@ -131,11 +131,11 @@ export default function Collection(){
                     <div className="product-img">
                         <img src="/images/sample4.jpeg" alt="product"/>
                         <div className="hover-icons">
-                                        <Link href="productview.php" className="view-icon">
+                                        <Link href="/productview" className="view-icon">
                                             <i className="fa-regular fa-eye"></i>
                                         </Link>
 
-                                        <Link href="#" className="cart-icon">
+                                        <Link href="/addtocart" className="cart-icon">
                                             <i className="fa-solid fa-cart-shopping"></i>
                                         </Link>
                                     </div>
@@ -159,11 +159,11 @@ export default function Collection(){
                     <div className="product-img">
                         <img src="/images/sample1.jpeg" alt="product"/>
                         <div className="hover-icons">
-                                        <Link href="productview.php" className="view-icon">
+                                        <Link href="/productview" className="view-icon">
                                             <i className="fa-regular fa-eye"></i>
                                         </Link>
 
-                                        <Link href="#" className="cart-icon">
+                                        <Link href="/addtocart" className="cart-icon">
                                             <i className="fa-solid fa-cart-shopping"></i>
                                         </Link>
                                     </div>
@@ -187,11 +187,11 @@ export default function Collection(){
                     <div className="product-img">
                         <img src="/images/sample6.jpeg" alt="product"/>
                         <div className="hover-icons">
-                                        <Link href="productview.php" className="view-icon">
+                                        <Link href="/productview" className="view-icon">
                                             <i className="fa-regular fa-eye"></i>
                                         </Link>
 
-                                        <Link href="#" className="cart-icon">
+                                        <Link href="/addtocart" className="cart-icon">
                                             <i className="fa-solid fa-cart-shopping"></i>
                                         </Link>
                                     </div>
@@ -215,11 +215,11 @@ export default function Collection(){
                     <div className="product-img">
                         <img src="/images/sample7.jpeg" alt="product"/>
                         <div className="hover-icons">
-                                        <Link href="productview.php" className="view-icon">
+                                        <Link href="/productview" className="view-icon">
                                             <i className="fa-regular fa-eye"></i>
                                         </Link>
 
-                                        <Link href="#" className="cart-icon">
+                                        <Link href="/addtocart" className="cart-icon">
                                             <i className="fa-solid fa-cart-shopping"></i>
                                         </Link>
                                     </div>

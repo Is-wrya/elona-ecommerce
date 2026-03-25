@@ -1,8 +1,16 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 export default function OrderSummary(){
+    const [showForm,setShowForm] = useState(false);
+    const saveinst= () => {
+        alert("Your instructions saved successfully!");
+        setShowForm(false);
+        }; 
+
+
     return(
         <section className="order-summary">
             <div className="container">
@@ -22,12 +30,21 @@ export default function OrderSummary(){
                                     <p>California</p>
                                     <p>Contact : 125364789</p>
                                     </div>
-                                    <Link href="#" className="change-btn">Change</Link>
+                                    <Link href="/profile" className="change-btn">Change</Link>
                                 </div>
-                                <Link href="#" className="delivery-link">Add Delivery Instructions</Link>
-                                <div className="delivery-instructions">
-                                 
+                                <button className="delivery-link" onClick={()=>setShowForm(true)}>Add Delivery Instructions</button>
+                                {showForm && (
+                                    <div className="delivery-instructions">
+                                        <textarea placeholder="Add your Instructions"></textarea>
+                                        <button className="cancelBtn" onClick={()=>setShowForm(false)}>
+                                            Cancel
+                                        </button>
+                                        <button className="SaveBtn" onClick={saveinst}>
+                                            Save
+                                        </button>
                                 </div>
+                                )}
+                                
                                 <div className="check-icon">
                                     <i className="fa-solid fa-check"></i>
                                 </div>

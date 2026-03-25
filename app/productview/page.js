@@ -34,7 +34,7 @@ export default function ProductView() {
     <section className="product-view">
         <div className="subheading">
             <p>
-                <Link href="/">home</Link> / <Link href="/product">explore</Link> / <Link href="/productview">dresses</Link>
+                <Link href="/">home</Link> / <Link href="/products">explore</Link> / <Link href="/productview">dresses</Link>
             </p>
         </div>
         <div className="container">
@@ -341,7 +341,7 @@ export default function ProductView() {
                                 <Link href="/productview" className="view-icon">
                                 <i className="fa-regular fa-eye"></i>
                                 </Link>
-                                <Link href="#" className="cart-icon">
+                                <Link href="addtocart" className="cart-icon">
                                 <i className="fa-solid fa-cart-shopping"></i>
                                 </Link>
                             </div>
@@ -366,7 +366,7 @@ export default function ProductView() {
                                 <Link href="/productview" className="view-icon">
                                 <i className="fa-regular fa-eye"></i>
                                 </Link>
-                                <Link href="#" className="cart-icon">
+                                <Link href="/addtocart" className="cart-icon">
                                 <i className="fa-solid fa-cart-shopping"></i>
                                 </Link>
                             </div>
@@ -391,7 +391,7 @@ export default function ProductView() {
                                 <Link href="/productview" className="view-icon">
                                 <i className="fa-regular fa-eye"></i>
                                 </Link>
-                                <Link href="#" className="cart-icon">
+                                <Link href="/addtocart" className="cart-icon">
                                 <i className="fa-solid fa-cart-shopping"></i>
                                 </Link>
                             </div>
@@ -417,7 +417,7 @@ export default function ProductView() {
                                 <Link href="/productview" className="view-icon">
                                 <i className="fa-regular fa-eye"></i>
                                 </Link>
-                                <Link href="#" className="cart-icon">
+                                <Link href="/addtocart" className="cart-icon">
                                 <i className="fa-solid fa-cart-shopping"></i>
                                 </Link>
                             </div>
@@ -443,7 +443,7 @@ export default function ProductView() {
                                 <Link href="/productview" className="view-icon">
                                 <i className="fa-regular fa-eye"></i>
                                 </Link>
-                                <Link href="#" className="cart-icon">
+                                <Link href="/addtocart" className="cart-icon">
                                 <i className="fa-solid fa-cart-shopping"></i>
                                 </Link>
                             </div>
@@ -469,7 +469,7 @@ export default function ProductView() {
                                 <Link href="/productview" className="view-icon">
                                 <i className="fa-regular fa-eye"></i>
                                 </Link>
-                                <Link href="#" className="cart-icon">
+                                <Link href="/addtocart" className="cart-icon">
                                 <i className="fa-solid fa-cart-shopping"></i>
                                 </Link>
                             </div>

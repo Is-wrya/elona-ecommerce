@@ -40,7 +40,7 @@ export default function Footer() {
                     <div className="footer-col">
                         <h4>Menu</h4>
                         <ul>
-                            <li><Link href="/products">Explore</Link></li>
+                            <li><Link href="/">Explore</Link></li>
                             <li><Link href="/products">New Arrivals</Link></li>
                             <li><Link href="/products">Categories</Link></li>
                             <li><Link href="/products">Top Products</Link></li>
@@ -78,13 +78,13 @@ export default function Footer() {
 
          {/* MOBILE FOOTER MENU */}
         <div className="mobile-footer-menu">
-        <div onClick={() => console.log("Open Drawer")}>
-          <i className="fa-solid fa-bars"></i>
+        <div><Link href="/">
+          <i className="fa-solid fa-bars"></i></Link>
         </div>
-        <div><i className="fa-regular fa-heart"></i></div>
-        <div><i className="fa-regular fa-user"></i></div>
+        <div><Link href="/wishlist"><i className="fa-regular fa-heart"></i></Link></div>
+        <div><Link href="/profile"><i className="fa-regular fa-user"></i></Link></div>
         <div className="cart-icon">
-          <i className="fa-solid fa-cart-shopping"></i>
+          <Link href="/addtocart"></Link><i className="fa-solid fa-cart-shopping"></i>
           <span className="badge">1</span>
         </div>
       </div>

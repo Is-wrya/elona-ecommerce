@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Return(){
     const [step, setStep] = useState(1);
@@ -9,6 +10,7 @@ export default function Return(){
     const [reason,setReason] = useState("");
     const [payment,setPayment] = useState("refund");
     const [showPopup,setShowPopup] = useState(false);
+    const router = useRouter();
     
 
 
@@ -142,7 +144,7 @@ export default function Return(){
                                             <label>
                                             <input
                                             type="radio"
-                                            name="condition"
+                                            name="conditions"
                                             value="sealed"
                                             onChange={(e)=>setCondition(e.target.value)}
                                             />
@@ -152,7 +154,7 @@ export default function Return(){
                                             <label>
                                             <input
                                             type="radio"
-                                            name="condition"
+                                            name="conditions"
                                             value="sealed"
                                             onChange={(e)=>setCondition(e.target.value)}
                                             />
@@ -162,7 +164,7 @@ export default function Return(){
                                             <label>
                                             <input
                                             type="radio"
-                                            name="condition"
+                                            name="conditions"
                                             value="sealed"
                                             onChange={(e)=>setCondition(e.target.value)}
                                             />
@@ -172,7 +174,7 @@ export default function Return(){
                                             <label>
                                             <input
                                             type="radio"
-                                            name="condition"
+                                            name="conditions"
                                             value="sealed"
                                             onChange={(e)=>setCondition(e.target.value)}
                                             />
@@ -182,7 +184,7 @@ export default function Return(){
                                             <label>
                                             <input
                                             type="radio"
-                                            name="condition"
+                                            name="conditions"
                                             value="sealed"
                                             onChange={(e)=>setCondition(e.target.value)}
                                             />
@@ -289,7 +291,8 @@ export default function Return(){
             <div className="popup-content">
                 <h3>Return Request Submitted</h3>
                 <p>You have successfully submitted the refund request</p>
-                <button className="popup-btn" onClick={()=>setShowPopup(false)}>OK</button>
+                <button className="popup-btn" onClick={()=>{setShowPopup(false); setTimeout(() => {
+    router.push("/profile");}, 100);}}>OK</button>
             </div>
         </div>
     )}

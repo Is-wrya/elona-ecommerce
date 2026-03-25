@@ -17,7 +17,6 @@ export default function Newarrivals(){
             <div className="container">
                 <Swiper
                 modules={[Autoplay]}
-                spaceBetween={30}
                 slidesPerGroup={1}
                 speed={600}
                 autoplay={{
@@ -26,15 +25,16 @@ export default function Newarrivals(){
                 }}
                 navigation
                 breakpoints={{
-                    320: { slidesPerView: 2 },
-                    576: { slidesPerView: 3 },
-                    768: { slidesPerView: 3 },
-                    1024: { slidesPerView: 5 },
+                    320: { slidesPerView: 2,spaceBetween:10 },
+                    576: { slidesPerView: 3, spaceBetween:20},
+                    768: { slidesPerView: 3, spaceBetween:20},
+                    1024: { slidesPerView: 5, spaceBetween:30
+                    },
                 }}
 > <SwiperSlide>
                         <div className="product-card ">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample6.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample6.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -51,7 +51,7 @@ export default function Newarrivals(){
                     <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample7.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample7.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -68,7 +68,7 @@ export default function Newarrivals(){
                     <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample1.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample1.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -86,7 +86,7 @@ export default function Newarrivals(){
                     <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample2.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample2.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -103,7 +103,7 @@ export default function Newarrivals(){
                     <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample3.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample3.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -121,7 +121,7 @@ export default function Newarrivals(){
                     <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample4.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample4.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -138,7 +138,7 @@ export default function Newarrivals(){
                     <SwiperSlide>
                         <div className="product-card">
                             <div className="product-img">
-                                <Link href="#"><img src="/images/sample6.jpeg" alt=""/></Link>
+                                <Link href="/productview"><img src="/images/sample6.jpeg" alt=""/></Link>
                             </div>
                             <div className="details">
                                 <h4>Green maxi dress</h4>
@@ -156,7 +156,7 @@ export default function Newarrivals(){
                 </Swiper>
             </div>
             <div className="button">
-                <Link href="products"><button className="primary-button">SHOP NOW</button></Link>
+                <Link href="/products"><button className="primary-button">SHOP NOW</button></Link>
             </div>
         </section>
        

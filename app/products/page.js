@@ -1,348 +1,84 @@
+
 "use client";
 
 import Link from "next/link";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import Banner from "../../components/wishlist/banner";
+import ProductsData from "@/lib/products";
+import Image from "next/image";
+import Sort from "@/components/filters/sort";
+import { useState } from "react";
+import ColorSelector from "@/components/wishlist/colorselection";
+import Filter from "../../components/filters/filter";
 
 export default function Products(){
-    return(
-        <>
-          <section className="product-details container">
-            <div className="inner-content">
-                <div className="left-heading">
-                <div>   
-                    <h3> Explore</h3>
-                    <p><Link href="/"> home</Link> / <Link href="/products">explore</Link></p>
-                </div>
-                </div>
-                <div className="right-heading">
-                        <button className="sort-btn">sort</button>
-                        <button className="filter-btn">filter
-                            <i className="fa-solid fa-filter"></i></button>
-                    </div>
-                    
-    </div> 
-    </section>  
- 
-
-<section className="product-image">
-    <div className="container">
-        <div className="row product-row">
+   const [ products, setProducts] = useState(ProductsData);
+   return(
+      <>
+    <Banner title ="Products"/>
+   <div className="container">
+    <div className="filters"><h4>filters</h4></div>
+         <div className="row">
             <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample1.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
+              <Filter/> 
             </div>
+        
+         <div className="col-md-9">
+            <Sort products={products} setProducts={setProducts}/>
+         <div className="products-list row">
+       <div className="row">
+  {products.map((product) => (
+    <div key={product.id} className="col-md-5">
+      
+      <div className="productlist-card">
+        <div className="img-card">
+          <Image
+            src={product.image}
+            alt={product.name}
+            width={300}
+            height={350}
+            className="img-sec"
+          />
 
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample1.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
+          <div className="hover-icons">
+            <Link href={`/productview/${product.id}`} className="view-icon">
+              <i className="fa-regular fa-eye"></i>
+            </Link>
 
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample2.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {!product.soldout && (
+              <button className="addtocart-sec">ADD TO CART</button>
+            )}
+            <button className="heart-btn">
+            <i className="fa-regular fa-heart heart-icon"></i>
+           </button>
+          </div>
 
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample3.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample4.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample1.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample6.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample7.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample1.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample2.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample3.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div className="col-md">
-                <div className="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div className="product-img">
-                        <img src="/images/sample4.jpeg" alt="product"/>
-                            <div className="hover-icons">
-                                <Link href="#" className="view-icon">
-                                    <i className="fa-regular fa-eye"></i>
-                                </Link>
-                                <Link href="#" className="cart-icon">
-                                    <i className="fa-solid fa-cart-shopping"></i>
-                                </Link>
-                            </div>
-                    </div>
-                    <div className="details">
-                        <h4>Green maxi dress</h4>
-                        <span className="wishlist"><i className="fa-regular fa-heart"></i></span>
-                        <div className="rating d-flex">
-                           ★★★★★ <span>4.5/5</span> 
-                        </div>
-                        <div className="price">
-                            $120
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          {product.soldout && (
+            <button className="soldout">Soldout</button>
+          )}
         </div>
+
+        <div className="content">
+          <h5 className="heading">{product.name}</h5>
+          <h5>₹{product.price}</h5>
+        </div>
+
+        {product.colors && (
+          <ColorSelector colors={product.colors} />
+        )}
+      </div>
+
     </div>
-</section>
-</>
-   );
+  ))}
+</div>
+      </div>
+      </div>
+       </div>
+
+   
+</div>
+    </>
+   ) 
 }
+
+
+
