@@ -14,7 +14,7 @@ export default function Blog(){
                 
             </div>
         </section>
-        <section className="content">
+        <section className="contentblog">
             <div className="container">
                 <div className="row">
                     <div className="col-md-2">

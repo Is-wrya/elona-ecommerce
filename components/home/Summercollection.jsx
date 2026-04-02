@@ -14,12 +14,12 @@ export default function SummerCollections(){
         </section>
         <section className="card-wrapper" id="cardWrapper">
             <div className="container">
-               <div className="card"><img src="/images/sample1.jpeg"/></div> 
-               <div className="card"><img src="/images/sample2.jpeg"/></div>
-               <div className="card"><img src="/images/sample3.jpeg"/></div>
-               <div className="card"><img src="/images/sample4.jpeg"/></div>
-               <div className="card"><img src="/images/sample6.jpeg"/></div>
-               <div className="card"><img src="/images/sample7.jpeg"/></div>
+               <div className="card"><img src="/images/promo1.jpeg"/></div> 
+               <div className="card"><img src="/images/promo2.jpeg"/></div>
+               <div className="card"><img src="/images/promo3.jpeg"/></div>
+               <div className="card"><img src="/images/promo4.jpeg"/></div>
+               <div className="card"><img src="/images/promo5.jpeg"/></div>
+               <div className="card"><img src="/images/promo6.jpeg"/></div>
             </div>
         </section>
         <div className="button">

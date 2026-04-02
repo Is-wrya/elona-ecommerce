@@ -8,12 +8,12 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Newarrivals(product){
+export default function FeaturedProduct(){
     return(
         <>
-        <section className="Top-products">
+        <section className="featured-products">
             <div className="container text-center">
-                <h3 className="top-product ">Top Products</h3>
+                <h3 className="top-product ">Featured Products</h3>
             </div>
             <div className="container">
                 <Swiper
@@ -41,7 +41,6 @@ export default function Newarrivals(product){
                                     <button className="addtocart-sec">ADD TO CART</button>
                                     <button className="soldout">Soldout</button>
                                 </div>
-                               
                             </div>
                              <div className="details">
                                     <h5 className="heading">Shirt</h5>

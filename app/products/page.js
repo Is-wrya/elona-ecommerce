@@ -10,6 +10,7 @@ import { useState } from "react";
 import ColorSelector from "@/components/wishlist/colorselection";
 import Filter from "../../components/filters/filter";
 
+
 export default function Products(){
    const [ products, setProducts] = useState(ProductsData);
    return(
@@ -27,7 +28,7 @@ export default function Products(){
          <div className="products-list row">
        <div className="row">
   {products.map((product) => (
-    <div key={product.id} className="col-md-5">
+    <div key={product.id} className="col-md-3">
       
       <div className="productlist-card">
         <div className="img-card">
