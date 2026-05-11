@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Promo from "../../lib/home-banner";
 
 export default function SummerCollections(){
 
@@ -14,14 +15,14 @@ export default function SummerCollections(){
         </section>
         <section className="card-wrapper" id="cardWrapper">
             <div className="container">
-               <div className="card"><img src="/images/promo1.jpeg"/></div> 
-               <div className="card"><img src="/images/promo2.jpeg"/></div>
-               <div className="card"><img src="/images/promo3.jpeg"/></div>
-               <div className="card"><img src="/images/promo4.jpeg"/></div>
-               <div className="card"><img src="/images/promo5.jpeg"/></div>
-               <div className="card"><img src="/images/promo6.jpeg"/></div>
+               {Promo.map((item)=>(
+                <div className="card" key={item.id}>
+                    <img src={item.image} alt={`Promo-${item.id}`}/>
+                </div>
+               ))}
             </div>
         </section>
+
         <div className="button">
             <Link href="/products"><button className="primary-button">EXPLORE NOW</button></Link>
         </div>

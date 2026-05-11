@@ -1,14 +1,23 @@
 "use client";
-
+import { useState } from "react";
 import Link from "next/link";
 import {  Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Products from "../../lib/products";
+import ColorSelector from "../wishlist/colorselection";
 
 export default function Newarrivals(product){
+    const [ liked, setLiked ] = useState({})
+    const toggleLike=(id)=>{
+        setLiked((prev)=>({
+            ...prev,
+            [id]: !prev[id],
+        }))
+    }
+    const TopProducts = Products.filter((item)=>item.label === "top-products")
     return(
         <>
         <section className="Top-products">
@@ -32,154 +41,40 @@ export default function Newarrivals(product){
                     1024: { slidesPerView: 5, spaceBetween:30
                     },
                 }}
-> <SwiperSlide>
-                        <div className="product-card1 ">
-                            <div className="product-img">
-                                <img src="/images/croptop.jpeg" alt=""/>
-                                <div className="hover-icons">
-                                    <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">ADD TO CART</button>
-                                    <button className="soldout">Soldout</button>
-                                </div>
-                               
-                            </div>
-                             <div className="details">
-                                    <h5 className="heading">Shirt</h5>
-                                    <h5 >$ 120</h5>
-                                      </div>
-                            
-                             <div className="color-sel">
-                                        <button className="blue"></button>
-                                        <button className="black"></button>
-                                        <button className="white"></button>
-                                    </div>
-                                    </div>
-                    </SwiperSlide>
+>
+                {TopProducts .map((item)=>(
                     <SwiperSlide>
-                        <div className="product-card1 ">
+                        <div className="product-card1">
                             <div className="product-img">
-                                <img src="/images/shirts.jpeg" alt=""/>
-                                <div className="hover-icons">
-                                    <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">ADD TO CART</button>
-                                   <button className="heart-btn">
-                                    <i className="fa-regular fa-heart "></i></button>
-                                </div>
-                               
+                            <img src={item.image} alt={`Products-${item.name}`}/>
+                            <div className="hover-icons">
+                                 <Link href={`/productview/${item.id}`}><i className="fa-regular fa-eye"></i></Link>
+                                 {!item.soldout && (<button className="heart-btn" onClick={() => toggleLike(item.id)}>
+                                    <i className={ liked[item.id] ? "fa-solid fa-heart" : "fa-regular fa-heart" }style={{
+                                        color: liked[item.id] ? "red" : "black",
+                                        }}
+                                    />
+                                </button>)}
+                                {!item.soldout? <Link href="#" className="addtocart-sec">ADD TO CART</Link>:<button className="soldout">
+                                soldout
+                                </button>} 
                             </div>
-                             <div className="details">
-                                    <h5 className="heading">Shirt</h5>
-                                    <h5 >$ 120</h5>
-                                      </div>
-                            
-                             <div className="color-sel">
-                                        <button className="blue"></button>
-                                        <button className="black"></button>
-                                        <button className="white"></button>
-                                    </div>
-                                    </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="product-card1 ">
-                            <div className="product-img">
-                                <img src="/images/pants.jpeg" alt=""/>
-                                <div className="hover-icons">
-                                    <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">ADD TO CART</button>
-                                    <button className="heart-btn">
-                                    <i className="fa-regular fa-heart "></i></button>
-                                </div>
-                               
+                           
                             </div>
-                             <div className="details">
-                                    <h5 className="heading">Shirt</h5>
-                                    <h5 >$ 120</h5>
-                                      </div>
-                            
-                             <div className="color-sel">
-                                        <button className="blue"></button>
-                                        <button className="black"></button>
-                                        <button className="white"></button>
-                                    </div>
-                                    </div>
+                            <div className="details">
+                            <h5 className="heading">{item.name}</h5>
+                            <h5>$ {item.price}</h5>
+                        </div>
+                        <div className="color-sel1">
+                             {item.colors && (
+                                <ColorSelector colors={item.colors}/>
+                             )}
+                        </div>
+                        </div>
+                        
                     </SwiperSlide>
-                  <SwiperSlide>
-                        <div className="product-card1 ">
-                            <div className="product-img">
-                                <img src="/images/gown.jpeg" alt=""/>
-                                <div className="hover-icons">
-                                    <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">ADD TO CART</button>
-                                    <button className="heart-btn">
-                                    <i className="fa-regular fa-heart "></i></button>
-                                </div>
-                               
-                            </div>
-                             <div className="details">
-                                    <h5 className="heading">Shirt</h5>
-                                    <h5 >$ 120</h5>
-                                      </div>
-                            
-                             <div className="color-sel">
-                                        <button className="blue"></button>
-                                        <button className="black"></button>
-                                        <button className="white"></button>
-                                    </div>
-                                    </div>
-                    </SwiperSlide>
-                  
-         <SwiperSlide>
-                        <div className="product-card1 ">
-                            <div className="product-img">
-                                <img src="/images/shirtswomen.jpeg" alt=""/>
-                                <div className="hover-icons">
-                                    <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">ADD TO CART</button>
-                                    <button className="heart-btn">
-                                    <i className="fa-regular fa-heart "></i></button>
-                                </div>
-                               
-                            </div>
-                             <div className="details">
-                                    <h5 className="heading">Shirt</h5>
-                                    <h5 >$ 120</h5>
-                                      </div>
-                            
-                             <div className="color-sel">
-                                        <button className="blue"></button>
-                                        <button className="black"></button>
-                                        <button className="white"></button>
-                                    </div>
-                                    </div>
-                    </SwiperSlide>
-                  
-         <SwiperSlide>
-                        <div className="product-card1 ">
-                            <div className="product-img">
-                                <img src="/images/trousers.jpeg" alt=""/>
-                                <div className="hover-icons">
-                                    <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">ADD TO CART</button>
-                                    <button className="heart-btn">
-                                    <i className="fa-regular fa-heart "></i></button>
-                                </div>
-                               
-                            </div>
-                             <div className="details">
-                                    <h5 className="heading">Shirt</h5>
-                                    <h5 >$ 120</h5>
-                                      </div>
-                            
-                             <div className="color-sel">
-                                        <button className="blue"></button>
-                                        <button className="black"></button>
-                                        <button className="white"></button>
-                                    </div>
-                                    </div>
-                    </SwiperSlide>
-                  
-         
-         
+                ))}
+                   
                 </Swiper>
             </div>
             <div className="button">

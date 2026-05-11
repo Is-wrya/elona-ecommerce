@@ -20,7 +20,7 @@ export default function Header() {
     pathname==="/profile"||
     pathname==="/return"||
     pathname==="/blog"||
-    pathname==="/productview"||
+    pathname.startsWith("/productview/")||
     pathname==="/signup";
 
 const isHome = pathname === "/";
@@ -28,6 +28,7 @@ const isHome = pathname === "/";
 return (
     <>
     {/* MOBILE SEARCH  */}
+    {pathname=="/" &&(
     <div className="mobile-search-header">
       {isHome && (
         <div className="search-icon">
@@ -40,14 +41,15 @@ return (
         </div>
       )}
     </div>
+    )}
 
 
     {/* TOP HEADER */}
     <header className="top-header">
         <div className="container header-flex">
             <div className="nav-left">
-                <Link href="/products">MEN</Link>
-                <Link href="/products">WOMEN</Link>
+                <Link href="/categories">MEN</Link>
+                <Link href="/categories">WOMEN</Link>
             </div>
 
             <div className="logo">
@@ -97,7 +99,7 @@ return (
             <ul className="nav-menu">
                 <li><Link href="/" className={pathname === "/" ? "active" : ""}>HOME</Link></li>
                 <li><Link href="/products" >SHOP</Link></li>
-                <li><Link href="/collections" >COLLECTION</Link></li>
+                <li><Link href="/categories" >COLLECTION</Link></li>
                 <li><Link href="/products" >NEW ARRIVALS</Link></li>
                 <li><Link href="/products" >TOP SELLING</Link></li>
             </ul>

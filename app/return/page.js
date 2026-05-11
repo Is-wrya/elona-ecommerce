@@ -51,9 +51,9 @@ export default function Return(){
                     </div>
                     {step===1 && (
                         <>
-                        <div className="form-step">
+                        <div className="form-step1">
                             <div className="content">
-                                <h4>Select the reason for your return</h4>
+                                <h5>Select the reason for your return</h5>
                                 <p>To help us process request quickly, please answer the following questions</p>
                             </div>
                             <div className="order-container">
@@ -64,7 +64,7 @@ export default function Return(){
                                 </div>
                                 <div className="order-content">
                                     <div className="col-product product-content">
-                                        <img src="/images/sample1.jpeg" alt=""/>
+                                        <img src="/images/shirts.jpeg" alt=""/>
                                         <span>White Elegant dress</span>
                                     </div>
                                     <div className="col-order-no">
@@ -78,9 +78,9 @@ export default function Return(){
                             <div className="row">
                                 <div className="col-md-6">
                                     <div className="left-section">
-                                        <h5 className="heading">
+                                        <h6 className="heading">
                                             What is the product's current condition?
-                                        </h5>
+                                        </h6>
                                         <div className="option">
                                             <label>
                                             <input
@@ -206,7 +206,7 @@ export default function Return(){
                     {step === 2 &&(
                         <div className="form-step">
                             <div className="content">
-                                <h4 className="reason-heading">Choose the method for receiving payment</h4>
+                                <h5 className="reason-heading">Choose the method for receiving payment</h5>
                             </div>
                             <div className="options">
                                 <label className="return-card">
@@ -220,7 +220,7 @@ export default function Return(){
                                     <div className="card-content">
                                         <div className="radio-circle"></div>
                                          <div>
-                                            <h4>I want a refund</h4>
+                                            <h5>I want a refund</h5>
                                             <p>We will process your refund, Which may take up to 7 business days.</p>
                                         </div>
                                     </div>
@@ -236,7 +236,7 @@ export default function Return(){
                                     <div className="card-content">
                                         <div className="radio-circle"></div>
                                         <div> 
-                                            <h4>I would like a replacement product </h4>
+                                            <h5>I would like a replacement product </h5>
                                             <p>We will replace your product with a new one.</p>
                                         </div>
                                     </div>
@@ -254,7 +254,7 @@ export default function Return(){
                     {step===3 && (
                         <>
                         <div className="form-step">
-                            <h4>Review your return request</h4>
+                            <h5>Review your return request</h5>
                         </div>
                         <div className="order-container">
                             <div className="order-header">

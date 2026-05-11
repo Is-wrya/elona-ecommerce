@@ -1,10 +1,45 @@
+import Features from "../../lib/features";
+
 export default function BottomBanner(){
+    const left=Features[0];
+    const middle=[Features[1],Features[2]];
+    const right=Features[3];
     return(
         <section className="bottom-banner">
             <div className="container">
                 <div className="row">
-                    
+                        <div className="col-md-4">
+                        <div className="service-card text-center">
+                            <div className="icon-circle">
+                                <i className={left.icon}></i>
+                            </div>
+                            <h3>{left.name}<br/>{left.sub}</h3>
+                            <p>{left.content}</p>
+                        </div>
+                    </div>
                     <div className="col-md-4">
+                    {middle.map((item=>(
+                        <div className="service-card horizontal mb-30 text-center">
+                            <div className="icon-circle">
+                                <i className={item.icon}></i>
+                            </div>
+                            <div>
+                            <h3>{item.name}<br/>{item.sub}</h3>
+                            <p>{item.content}</p>
+                            </div>
+                    </div>)))}
+                       </div>
+                     
+                    <div className="col-md-4">
+                        <div className="service-card text-center">
+                            <div className="icon-circle">
+                                <i className={right.icon}></i>
+                            </div>
+                            <h3>{right.name}<br/>{right.sub}</h3>
+                            <p>{right.content}</p>
+                        </div>
+                    </div>
+                    {/* <div className="col-md-4">
                         <div className="service-card text-center">
                             <div className="icon-circle">
                                 <i className="fa-solid fa-thumbs-up"></i>
@@ -44,7 +79,7 @@ export default function BottomBanner(){
                             <h3>Payment With Secure<br/>System</h3>
                             <p>Lorem ipsum dolor sit amet consectetur. Suspendisse laoreet scelerisque morbi vulputate. Quisque bibendum eget id diam elementum fringilla duis.</p>
                         </div>
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

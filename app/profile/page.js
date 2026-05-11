@@ -136,7 +136,7 @@ export default function Profile() {
 
                         <div className="recent-orders">
                           <div className="order-img">
-                            <img src="/images/shirts.jpeg" />
+                            <Link href="/productview"> <img src="/images/shirts.jpeg"/></Link>
                           </div>
                           <div className="order-content">
                             <p className="order-id">#CE3445</p>
@@ -149,14 +149,14 @@ export default function Profile() {
                               <h6>size: S</h6>
                             </div>
                             <div className="return-product">
-                              <p>return product ?</p>
+                              <Link href="/return"><p>return product ?</p></Link>
                             </div>
                           </div>
                         </div>
 
                         <div className="recent-orders">
                           <div className="order-img">
-                            <img src="/images/gown.jpeg" />
+                            <Link href="/productview"> <img src="/images/gown.jpeg" /></Link>
                           </div>
                           <div className="order-content">
                             <p className="order-id">#CE3446</p>
@@ -169,7 +169,7 @@ export default function Profile() {
                               <h6>size: S</h6>
                             </div>
                             <div className="return-product">
-                              <p>return product ?</p>
+                              <Link href="/return"><p>return product ?</p></Link>
                             </div>
                           </div>
                         </div>
@@ -187,7 +187,7 @@ export default function Profile() {
                                 <div className="product-img">
                                      <div className="hover-icons">
                                     <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">MOVE TO CART</button>
+                                    <Link href="/addtocart"  className="addtocart-sec">MOVE TO CART</Link>
         
                                 </div>
                                   <img src="/images/shirts.jpeg" />
@@ -205,7 +205,7 @@ export default function Profile() {
                                   <img src="/images/croptop.jpeg" />
                                   <div className="hover-icons">
                                     <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">MOVE TO CART</button>
+                                    <Link href="/addtocart"  className="addtocart-sec">MOVE TO CART</Link>
         
                                 </div>
                                 </div>
@@ -222,7 +222,7 @@ export default function Profile() {
                                   <img src="/images/pants.jpeg" />
                                   <div className="hover-icons">
                                     <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">MOVE TO CART</button>
+                                    <Link href="/addtocart"  className="addtocart-sec">MOVE TO CART</Link>
         
                                 </div>
                                 </div>
@@ -239,7 +239,7 @@ export default function Profile() {
                                   <img src="/images/tshirt.jpeg" />
                                   <div className="hover-icons">
                                     <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">MOVE TO CART</button>
+                                    <Link href="/addtocart"  className="addtocart-sec">MOVE TO CART</Link>
         
                                 </div>
                                 </div>
@@ -256,7 +256,7 @@ export default function Profile() {
                                   <img src="/images/denimskirt.jpeg" />
                                   <div className="hover-icons">
                                     <Link href="/productview"><i className="fa-regular fa-eye"></i></Link>
-                                    <button className="addtocart-sec">MOVE TO CART</button>
+                                    <Link href="/addtocart"  className="addtocart-sec">MOVE TO CART</Link>
         
                                 </div>
                                 </div>
@@ -329,7 +329,7 @@ export default function Profile() {
                        
                         <div className="recent-orders">
                           <div className="order-img">
-                            <img src="/images/shirts.jpeg" />
+                            <Link href="/productview"><img src="/images/shirts.jpeg" /></Link>
                           </div>
                           <div className="order-content">
                             <p className="order-id">#CE3445</p>
@@ -342,13 +342,13 @@ export default function Profile() {
                               <h6>size: S</h6>
                             </div>
                             <div className="return-product">
-                              <p>return product ?</p>
+                              <Link href="/return"><p>return product ?</p></Link>
                             </div>
                           </div>
                         </div>
                         <div className="recent-orders">
                           <div className="order-img">
-                            <img src="/images/pants.jpeg" />
+                            <Link href="/productview"><img src="/images/pants.jpeg" /></Link>
                           </div>
                           <div className="order-content">
                             <p className="order-id">#CE3445</p>
@@ -361,7 +361,7 @@ export default function Profile() {
                               <h6>size: S</h6>
                             </div>
                             <div className="return-product">
-                              <p>return product ?</p>
+                              <Link href="/return"><p>return product ?</p></Link>
                             </div>
                           </div>
                         </div>

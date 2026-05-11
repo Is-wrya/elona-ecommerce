@@ -42,12 +42,12 @@ export default function Footer() {
                         <ul>
                             <li><Link href="/">Explore</Link></li>
                             <li><Link href="/products">New Arrivals</Link></li>
-                            <li><Link href="/products">Categories</Link></li>
+                            <li><Link href="/categories">Categories</Link></li>
                             <li><Link href="/products">Top Products</Link></li>
                             <li><Link href="/products">Our Collections</Link></li>
-                            <li><Link href="/products">Men</Link></li>
-                            <li><Link href="/products">Women</Link></li>
-                            <li><Link href="/products">Brands</Link></li>
+                            <li><Link href="/categories">Men</Link></li>
+                            <li><Link href="/categories">Women</Link></li>
+                            <li><Link href="/brandpage">Brands</Link></li>
                         </ul>
                     </div>
                     <div className="footer-col">
@@ -64,14 +64,14 @@ export default function Footer() {
                         <h4>Accounts</h4>
                         <ul>
                             <li><Link href="/profile">My Account</Link></li>
-                            <li><Link href="#">My Orders</Link></li>
+                            <li><Link href="/profile">My Orders</Link></li>
                             <li><Link href="#">Vouchers and Discount</Link></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>ALl rights reserved</p>
+                <p>All rights reserved</p>
                 <p>Copyright 2025 by Elona</p>
             </div>
         </footer>

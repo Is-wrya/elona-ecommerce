@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { categories } from "@/lib/categories";
 import Link from "next/link";
+import Banner from "../wishlist/banner";
 
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 
@@ -25,13 +26,7 @@ export default function Categories() {
       
     return(
         <>
-        <section className="cate-sec">
-            <div className="container">
-                <div className="img-card">
-                    <img src="/images/collections.png"/>
-                </div>
-            </div>
-        </section>
+        <Banner title="Categories"/>
         <section className="categories-sec">
             <div className="container">
                 <div className="cate-name">

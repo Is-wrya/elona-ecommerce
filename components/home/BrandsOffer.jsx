@@ -5,7 +5,9 @@ import { Autoplay } from "swiper/modules";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-export default function Brands(){
+import  BrandsOffer from "../../lib/brands-sec";
+
+export default function Brands(brands){
     return(
        <>
        <section className="brands">
@@ -23,39 +25,20 @@ export default function Brands(){
                 }}
                 navigation
                 breakpoints={{
+                  0: {slidesPerView: 2 },
                     320: { slidesPerView: 2 },
                     576: { slidesPerView: 3 },
                     768: { slidesPerView: 4 },
                     1024: { slidesPerView: 5 },
                 }}>
+           {BrandsOffer.slice(0,9).map((brands)=>(
+               <SwiperSlide>
+                  <Link href="/brandpage">
+                  <img src={brands.image} alt={brands.name}/>
+                  </Link>
+               </SwiperSlide>
+           ))}
            
-            <SwiperSlide>
-               <Link href="/collections"><img src="images/brand2.svg" alt=""/></Link> 
-            </SwiperSlide>
-            <SwiperSlide>
-               <Link href="/collections"><img src="images/brand1.svg" alt=""/></Link> 
-            </SwiperSlide>
-            <SwiperSlide>
-               <Link href="/collections"><img src="images/brand3.svg" alt=""/></Link> 
-            </SwiperSlide>
-            <SwiperSlide>
-               <Link href="/collections"><img src="images/brand4.svg" alt=""/></Link> 
-            </SwiperSlide>
-            <SwiperSlide>
-               <Link href="/collections"><img src="images/brand5.svg" alt=""/></Link> 
-            </SwiperSlide>
-            <SwiperSlide>
-               <Link href="/collections"><img src="images/brand6.svg" alt=""/></Link> 
-            </SwiperSlide>
-            <SwiperSlide>
-               <Link href="/collections"><img src="images/brand7.svg" alt=""/></Link> 
-            </SwiperSlide>
-            <SwiperSlide>
-               <Link href="/collections"><img src="images/brand8.svg" alt=""/></Link> 
-            </SwiperSlide>
-            <SwiperSlide>
-               <Link href="/collections"><img src="images/brand9.svg" alt=""/></Link> 
-            </SwiperSlide>
              </Swiper>
         </div>
        </section>

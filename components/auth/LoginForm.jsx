@@ -20,14 +20,14 @@ export default function Login() {
                 <div className="user-details">
                     <h4>Account Login</h4>
 
-            <div className="login-ggl-fb">
+            <div className="login-ggl-fb-button">
 
-              <button className="google">
+              <button className="google1">
                 <i className="fa-brands fa-google"></i>
                 Continue with Google
               </button>
 
-              <button className="facebook">
+              <button className="facebook1">
                 <i className="fa-brands fa-facebook"></i>
                 Continue with Facebook
               </button>

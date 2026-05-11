@@ -2,12 +2,12 @@
 
 import Link from "next/link";
 import Banner from "../../components/wishlist/banner";
+import BrandsOffer from "../../lib/brands-sec";
 
 export default function Brandsection() {
   return (
     <>
       <Banner title="Brands" />
-
       <section className="trusted-brands">
         <div className="container">
           
@@ -18,81 +18,19 @@ export default function Brandsection() {
               style, and reliability in every product.
             </p>
           </div>
-
           <div className="brand-det">
             <div className="row">
-              <div className="col-md-2">
+        {BrandsOffer ?. map((item) =>
+              <div className=" col-6 col-md-2">
                 <div className="brand-details">
                   <div className="brand-img">
-                    <img src="/images/brand1.svg" alt="brand" />
+                   <Link href="/products"> <img src={item.image} alt={item.name} /></Link>
                   </div>
                 </div>
               </div>
-
-              <div className="col-md-2">
-                <div className="brand-details">
-                  <div className="brand-img">
-                    <img src="/images/brand2.svg" alt="brand" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-2">
-                <div className="brand-details">
-                  <div className="brand-img">
-                    <img src="/images/brand3.svg" alt="brand" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-2">
-                <div className="brand-details">
-                  <div className="brand-img">
-                    <img src="/images/brand4.svg" alt="brand" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-2">
-                <div className="brand-details">
-                  <div className="brand-img">
-                    <img src="/images/brand5.svg" alt="brand" />
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-md-2">
-                <div className="brand-details">
-                  <div className="brand-img">
-                    <img src="/images/brand7.svg" alt="brand" />
-                  </div>
-                </div>
-              </div>
-             <div className="col-md-2">
-                <div className="brand-details">
-                  <div className="brand-img">
-                    <img src="/images/brand8.svg" alt="brand" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-2">
-                <div className="brand-details">
-                  <div className="brand-img">
-                    <img src="/images/brand9.svg" alt="brand" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-2">
-                <div className="brand-details">
-                  <div className="brand-img">
-                    <img src="/images/brand1.svg" alt="brand" />
-                  </div>
-                </div>
-              </div>
-
+              )}
             </div>
           </div>
-
         </div>
       </section>
     </>

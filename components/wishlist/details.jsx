@@ -5,10 +5,11 @@ import Link from "next/link";
 import ColorSelector from "./colorselection";
 
 export default function WishlistCard({ product, onRemove }){
+    
     return(
         <div className="wishlist-card">
             <div className="img-card">
-                <Image
+                <img
                 src={product.image}
                 alt={product.name}
                 width={300}
@@ -17,11 +18,11 @@ export default function WishlistCard({ product, onRemove }){
                 />
                 
                 <div className="hover-icons">
-                    <Link href={`/productview/${product.id}`}className="view-icon">
+                    <Link href={`/productview/${product.id}`}  className="view-icon">
                     <i className="fa-regular fa-eye"></i>
                 </Link>
                 {!product.soldout && (
-                    <button className="addtocart-sec">ADD TO CART</button>)}
+                    <Link href="/addtocart" className="addtocart-sec">ADD TO CART</Link>)}
                     <button className="remove-btn"
                 onClick={()=>onRemove(product.id)}>
                     <i className="fa-solid fa-xmark"></i>

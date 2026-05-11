@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-export default function  ColorSelector({ colors}) {
-    const [selectedColor, setSelectedColor] = useState("");
+export default function  ColorSelector({ colors = [] }) {
+    const [selectedColor, setSelectedColor] = useState(colors[0] || "");
 
     return(
         <div className="color-selector">
@@ -12,6 +12,7 @@ export default function  ColorSelector({ colors}) {
                     <span key={color}
                     className={`color-box ${color} ${
                     selectedColor === color ? "active" : ""}`}
+                    style={{backgroundColor: color }}
                     onClick={()=>setSelectedColor(color)}
                     ></span>
                 ))}

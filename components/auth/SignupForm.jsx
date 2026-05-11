@@ -59,14 +59,14 @@ export default function Signup() {
                             <div className="divider">
                                 <span>or</span>
                             </div>
-                            <div className="login-ggl-fb">
+                            <div className="login-ggl-fb-button">
 
-              <button className="google">
+              <button className="google1">
                 <i className="fa-brands fa-google"></i>
                 Continue with Google
               </button>
 
-              <button className="facebook">
+              <button className="facebook1">
                 <i className="fa-brands fa-facebook"></i>
                 Continue with Facebook
               </button>

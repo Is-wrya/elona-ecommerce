@@ -1,46 +1,19 @@
+import PromoSection from "../../lib/promo";
 
 export default function PromoRibbon(){
+    const repeated=[...PromoSection,...PromoSection,...PromoSection];
     return(
         <div className="promo-ribbon">
             <div className="ring">
-                <span>UPTO 20% OFF</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>FAST DELIVERY AVAILABLE</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>FREE SHIPPING OVER 999</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>UPTO 20% OFF</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>FAST DELIVERY AVAILABLE</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>FREE SHIPPING OVER 999</span>
-            <i className="fa-regular fa-star"></i>
-            <span>UPTO 20% OFF</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>FAST DELIVERY AVAILABLE</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>FREE SHIPPING OVER 999</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>UPTO 20% OFF</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>FAST DELIVERY AVAILABLE</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>FREE SHIPPING OVER 999</span>
-            <i className="fa-regular fa-star"></i>
-
-            <span>UPTO 20% OFF</span>
-            <i className="fa-regular fa-star"></i>
+                {repeated.map((item, index)=> (
+                   
+                     <span key="index">
+                        {item.name}
+                          <i className="fa-regular fa-star" ></i>
+                        </span>
+                ))}
+                </div>
             </div>
-        </div>
+     
     );
 }
