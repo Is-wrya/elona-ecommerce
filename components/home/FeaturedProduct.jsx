@@ -9,16 +9,19 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Products from "../../lib/products";
 import ColorSelector from "../wishlist/colorselection";
+import { useWishlist } from "../../context/WishlistContext";
 
 export default function FeaturedProduct(){
-   const [ liked, setLiked ] = useState({})
-    const toggleLike=(id)=>{
-        setLiked((prev)=>({
-            ...prev,
-            [id]: !prev[id],
-        }))
-    }
+
     const FeaturedProducts = Products.filter((item)=>item.label === "Featured")
+    const {  addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
+    const toggleLike = (item) => {
+      if (isInWishlist(item.id)) {
+        removeFromWishlist(item.id);
+      } else {
+        addToWishlist(item);
+      }
+    };
     return(
         <>
         <section className="featured-products">
@@ -43,22 +46,29 @@ export default function FeaturedProduct(){
                     },
                 }}
 > {FeaturedProducts.map((item)=>(
-                    <SwiperSlide>
+                    <SwiperSlide key={item.id}>
                         <div className="product-card1">
                             <div className="product-img">
                             <img src={item.image} alt={`Products-${item.name}`}/>
                             <div className="hover-icons">
-                                 <Link href={`/productview/${item.id}`}><i className="fa-regular fa-eye"></i></Link>
-                                 {!item.soldout && (<button className="heart-btn" onClick={() => toggleLike(item.id)}>
-                                    <i className={ liked[item.id] ? "fa-solid fa-heart" : "fa-regular fa-heart" }style={{
-                                        color: liked[item.id] ? "red" : "black",
-                                        }}
-                                    />
-                                </button>)}
-                                {!item.soldout? <Link href="#" className="addtocart-sec">ADD TO CART</Link>:<button className="soldout">
-                                soldout
-                                </button>} 
+                                <Link href={`/productview/${item.id}`} className="view-icon">
+                                <i className="fa-regular fa-eye"></i>
+                                </Link>
+
+                                {/* {!item.soldout && (
+                                <button className="addtocart-sec" onClick={() => addToCart(item)}>ADD TO CART</button>
+                                )} */}
+                                <button className="heart-btn" onClick={() => {console.log("clicked", item.id);
+                                toggleLike(item);}}>
+                                                        <i className={ isInWishlist(item.id) ? "fa-solid fa-heart" : "fa-regular fa-heart" }style={{
+                                                            color: isInWishlist(item.id) ? "red" : "black",
+                                                            }}
+                                                        />
+                                                    </button>
                             </div>
+                                {item.soldout && (
+                                    <button className="soldout">Soldout</button>
+                                )}
                            
                             </div>
                             <div className="details">

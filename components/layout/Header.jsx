@@ -48,8 +48,8 @@ return (
     <header className="top-header">
         <div className="container header-flex">
             <div className="nav-left">
-                <Link href="/categories">MEN</Link>
-                <Link href="/categories">WOMEN</Link>
+                <Link href="/categories?gender=men">MEN</Link>
+                <Link href="/categories?gender=women">WOMEN</Link>
             </div>
 
             <div className="logo">

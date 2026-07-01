@@ -6496,7 +6496,15 @@ z
 .productlist-card .img-card:hover .soldout {
   display: none;
 }
-
+.new-arrivals .product-card1:hover .soldout {
+  display: none;
+}
+.Top-products .product-card1:hover .soldout {
+  display: none;
+}
+.featured-products .product-card1:hover .soldout {
+  display: none;
+}
 .sort-dropdown{
     display: flex;
     justify-content: end;

@@ -10,9 +10,8 @@ export default function OurStory(){
             <div className="row">
                 <div className="col-md-6">
                 {Ourstory.map((item)=>(
-                      <div className="side-img1">
-                        <img 
-                        key={item.id}
+                      <div className="side-img1" key={item.id}>
+                        <img
                         src={item.image}
                         className={item.className} />
 

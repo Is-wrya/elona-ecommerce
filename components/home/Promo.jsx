@@ -7,7 +7,7 @@ export default function PromoRibbon(){
             <div className="ring">
                 {repeated.map((item, index)=> (
                    
-                     <span key="index">
+                     <span key={index}>
                         {item.name}
                           <i className="fa-regular fa-star" ></i>
                         </span>

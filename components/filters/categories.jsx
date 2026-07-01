@@ -49,7 +49,11 @@ export default function Categories() {
                         <div className="category-card">
                         <div className="cat-image">
                         <img src={cat.image} alt={cat.label}/>
-                              <Link href={`/products?category=${cat.name}`} className="cat-label">
+                              {/* <Link href={`/products?category=${cat.name}`} className="cat-label"> */}
+                              <Link 
+                                href={`/products?category=${cat.name}&gender=${cat.gender}`} 
+                                className="cat-label"
+                                >
                                 <h4>{cat.name}</h4>
                             </Link>
                         </div>

@@ -60,6 +60,7 @@ export default function ProductData(){
 
    const { addToCart } = useCart();
    
+   
    return(
       <>
     <Banner title ="Products"/>
