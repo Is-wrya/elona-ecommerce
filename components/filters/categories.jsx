@@ -45,7 +45,7 @@ export default function Categories() {
                 <div className="category-grid">
                     <div className="row">
                     {filteredCategories.map((cat) => (
-                    <div key={cat.name} className="col-md ">
+                    <div key={cat.id} className="col-md ">
                         <div className="category-card">
                         <div className="cat-image">
                         <img src={cat.image} alt={cat.label}/>
@@ -64,7 +64,7 @@ export default function Categories() {
                 </div>
                 </div>
         
-        
+
         </section>
         </>
     )
